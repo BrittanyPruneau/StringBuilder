@@ -1,0 +1,54 @@
+package exerciseStringBuilder;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ExerciseStringBuilder 
+{
+
+	public static void main(String[] args) 
+	{
+		/*
+		 * Find the first occurrence of two consecutive spaces. Save the index in a
+		 * variable called doubleSpace Replace the 2 consecutive spaces with a single
+		 * space In a single statement do the following two things: Replace the first
+		 * letter of the content of sb with �C� and add a period (.) at the end of the
+		 * sentence. Print the content of sb
+		 */
+		StringBuilder sb = new StringBuilder("Cats live"); 
+		sb.setCharAt(0, 'r');
+		sb.append(" on ");
+		System.out.println("sb: " + sb);
+		
+		/*
+		 * Change the content of sb so that it includes the original content followed by
+		 * the reverse content. Like this: current text => current texttxet tnerruc This
+		 * task might take multiple code statements. It doubles the length of the
+		 * content of sb. Print the content of sb
+		 */
+		StringBuilder temp = new StringBuilder(sb);
+		sb.append(temp.reverse());
+		System.out.println("sb: " + sb);
+		
+		/*
+		 * Find the first occurrence of two consecutive spaces. Save the index in a
+		 * variable called doubleSpace Replace the 2 consecutive spaces with a single
+		 * space In a single statement do the following two things: Replace the first
+		 * letter of the content of sb with �C� and add a period (.) at the end of the
+		 * sentence. Print the content of sb
+		 */
+		int doubleSpace = sb.indexOf("  ");
+		sb.deleteCharAt(doubleSpace);
+		sb.append('.').setCharAt(0, 'C');
+		System.out.println("sb: " + sb);
+	}
+	/*
+	 * List<String> trees = Arrays.asList("oak", "pine", "fir","ash", "birch",
+	 * "elm", "yew"); private static String listToString(List<String> list) {
+	 * StringBuilder sb = new StringBuilder(32); for(String el : list) {
+	 * sb.append(el).append("  "); } return sb.toString(); }
+	 */
+		
+
+
+}
